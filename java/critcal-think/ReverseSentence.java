@@ -9,6 +9,8 @@ public class ReverseSentence {
 
         if (sentence.isEmpty()) {
             System.err.println("Empty input");
+            scanner.close();
+            return;
         }
 
         String[] convert_string = sentence.split(" ");
