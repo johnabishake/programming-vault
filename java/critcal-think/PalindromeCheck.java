@@ -16,13 +16,14 @@ public class PalindromeCheck {
         String lower_sentence = sentence.toLowerCase();
         String clean_sentence = lower_sentence.replaceAll("[^a-zA-Z]", "");
         int sentence_length = clean_sentence.length();
-        String reveresd = "";
+        StringBuilder string_reverse = new StringBuilder();
 
         for (int i = sentence_length - 1; i >= 0; i--) {
-            reveresd += clean_sentence.charAt(i);
+            string_reverse.append(clean_sentence.charAt(i));
         }
+        String reveresd_sentence = string_reverse.toString();
 
-        if (clean_sentence.equals(reveresd)) {
+        if (clean_sentence.equals(reveresd_sentence)) {
             System.out.println("It is a palindrome");
         } else {
             System.out.println("It is not a palindrome");
